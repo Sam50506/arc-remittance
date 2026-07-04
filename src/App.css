@@ -246,10 +246,16 @@ g:focus {
 
 .ap-spin-earth {
   display: inline-block;
-  perspective: 200px;
-  animation: ap-spin-earth-rotate 7s linear infinite;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+  background-image: url('/earth-texture.svg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  box-shadow: inset -0.25em -0.15em 0.3em rgba(0,0,0,0.45), inset 0.1em 0.1em 0.2em rgba(255,255,255,0.25);
+  animation: ap-spin-earth-scroll 6s linear infinite;
 }
-@keyframes ap-spin-earth-rotate {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(-360deg); }
+@keyframes ap-spin-earth-scroll {
+  from { background-position-x: 0; }
+  to { background-position-x: -1.8em; }
 }
