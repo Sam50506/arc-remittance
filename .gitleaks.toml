@@ -1,0 +1,12 @@
+[extend]
+useDefault = true
+
+[allowlist]
+paths = [
+  "node_modules",
+  "build",
+  ".next",
+  "dist",
+  "contracts-hardhat/node_modules",
+  "contracts/node_modules"
+]
