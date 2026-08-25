@@ -7,12 +7,14 @@ const CONTRACT_PATH = path.resolve('./contracts/ScheduledPayment.sol');
 const source = fs.readFileSync(CONTRACT_PATH, 'utf8');
 
 function findImports(importPath) {
-  const candidates = [
-    path.resolve('node_modules', importPath),
-    path.resolve('../node_modules', importPath),
+  const roots = [
+    path.resolve('node_modules'),
+    path.resolve('../node_modules'),
   ];
-  for (const p of candidates) {
-    if (fs.existsSync(p)) return { contents: fs.readFileSync(p, 'utf8') };
+  for (const root of roots) {
+    const candidate = path.resolve(root, importPath);
+    if (!candidate.startsWith(root + path.sep)) continue; // block path traversal outside node_modules
+    if (fs.existsSync(candidate)) return { contents: fs.readFileSync(candidate, 'utf8') };
   }
   return { error: 'File not found: ' + importPath };
 }

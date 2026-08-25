@@ -208,10 +208,10 @@ async function processPayment(contract, i, now, counters) {
         }
         console.log("Cashback awarded: " + cashbackAmtStr + " to " + p.sender);
       }
-    } catch (ce) { console.error("Cashback failed for payment " + i + ":", ce.message); }
+    } catch (ce) { console.error("Cashback failed for payment %s:", i, ce.message); }
 
   } catch (e) {
-    console.error("Payment " + i + " failed:", e.message);
+    console.error("Payment %s failed:", i, e.message);
     counters.failed++;
   }
 }

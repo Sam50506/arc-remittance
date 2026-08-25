@@ -1,0 +1,34 @@
+{
+  "short_name": "ArcPay",
+  "name": "ArcPay \u2014 USDC Remittance",
+  "description": "Cross border USDC remittance on Arc Testnet. Zero fees, instant settlement.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0F1A2E",
+  "background_color": "#ffffff",
+  "categories": [
+    "finance",
+    "utilities"
+  ],
+  "screenshots": []
+}
